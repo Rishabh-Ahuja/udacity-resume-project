@@ -8,7 +8,7 @@ var bio = {
     contacts: {
         Mobile: '+919999425219',
         Github: 'https://github.com/Rishabh-Ahuja',
-        Location: 'Delhi',
+        location: 'Delhi',
         Email: 'ahuja.rishabh99@hotmail.com'
     },
     welcomeMessage: 'Web Developers Are Awesome ! So You Are!',
@@ -75,12 +75,12 @@ var education = {
             $(".education-entry:last").append(NameAndDegree + schoolDates + schoolLocation + schoolMajour);
         });
         $("#education").append(HTMLonlineClasses);
-        $.each(education.onlineCourses,function (index) {
+        $.each(education.onlineCourses, function (index) {
             $("#education").append(HTMLschoolStart);
-            var title = HTMLonlineTitle.replace('%data%',education.onlineCourses[index].title);
-            var onlineSchool = HTMLonlineSchool.replace("%data%",education.onlineCourses[index].school);
-            var onlineDates = HTMLonlineDates.replace('%data%',education.onlineCourses[index].dates);
-            var onlineUrl = HTMLonlineURL.replace('#', education.onlineCourses[index].url).replace('%data%',education.onlineCourses[index].url);
+            var title = HTMLonlineTitle.replace('%data%', education.onlineCourses[index].title);
+            var onlineSchool = HTMLonlineSchool.replace("%data%", education.onlineCourses[index].school);
+            var onlineDates = HTMLonlineDates.replace('%data%', education.onlineCourses[index].dates);
+            var onlineUrl = HTMLonlineURL.replace('#', education.onlineCourses[index].url).replace('%data%', education.onlineCourses[index].url);
             $(".education-entry:last").append(title + onlineSchool + onlineDates + onlineUrl);
         });
     }
@@ -90,14 +90,14 @@ var work = {
         {
             "employer": "Srestha Club",
             "title": "Web Developer",
-            'location':"Delhi",
+            'location': "Delhi",
             "dates": "January 2017",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc hendrerit justo et sapien dapibus ullamcorper. In risus mi, commodo vitae placerat eu, dapibus at diam. Proin pretium vitae nulla sit amet lacinia. Etiam posuere vitae neque et semper. Duis ultrices fermentum elit vulputate fermentum. Nullam dui tortor, condimentum id varius a, congue feugiat odio. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;."
         },
         {
             "employer": "Vedic Club",
             "title": "Web Developer",
-            'location':"Bangalore",
+            'location': "Bangalore",
             "dates": "January 2017",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc hendrerit justo et sapien dapibus ullamcorper. In risus mi, commodo vitae placerat eu, dapibus at diam. Proin pretium vitae nulla sit amet lacinia. Etiam posuere vitae neque et semper. Duis ultrices fermentum elit vulputate fermentum. Nullam dui tortor, condimentum id varius a, congue feugiat odio. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; "
         }
@@ -109,10 +109,10 @@ var work = {
             var formattedEmployer = HTMLworkEmployer.replace('%data%', work.jobs[index].employer);
             var formattedWorkTittle = HTMLworkTitle.replace('%data%', work.jobs[index].title);
             var formattedEmployerTittle = formattedEmployer + formattedWorkTittle;
-            var workdates = HTMLworkDates.replace('%data%',work.jobs[index].dates);
-            var workLocation = HTMLworkLocation.replace('%data%',work.jobs[index].location);
+            var workdates = HTMLworkDates.replace('%data%', work.jobs[index].dates);
+            var workLocation = HTMLworkLocation.replace('%data%', work.jobs[index].location);
             var formattedWorkDescription = HTMLworkDescription.replace('%data%', work.jobs[index].description);
-            $(".work-entry:last").append(formattedEmployerTittle +  workdates + workLocation + formattedWorkDescription);
+            $(".work-entry:last").append(formattedEmployerTittle + workdates + workLocation + formattedWorkDescription);
         });
 
     }
