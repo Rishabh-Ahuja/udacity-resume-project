@@ -6,16 +6,16 @@ var bio = {
     name: 'Rishabh Ahuja',
     role: 'Web Developer',
     contacts: {
-        Mobile: '+919999425219',
-        Github: 'https://github.com/Rishabh-Ahuja',
+        mobile: '+919999425219',
+        github: 'https://github.com/Rishabh-Ahuja',
         location: 'Delhi',
-        Email: 'ahuja.rishabh99@hotmail.com'
+        email: 'ahuja.rishabh99@hotmail.com'
     },
     welcomeMessage: 'Web Developers Are Awesome ! So You Are!',
     skills: ['Html', 'CSS', 'Javascript', 'NodeJS', 'AngularJs', 'Bootstrap', 'React', 'Ember', 'MongoDB'],
-    bioPic: 'images/fry.jpg',
+    biopic: 'images/fry.jpg',
     display: function () {
-        $('#header').prepend(HTMLheaderRole.replace('%data%', bio.role)).prepend(HTMLheaderName.replace('%data%', bio.name)).append(HTMLbioPic.replace('%data%', bio.bioPic)).append(HTMLwelcomeMsg.replace('%data%', bio.welcomeMessage)).append(HTMLskillsStart);
+        $('#header').prepend(HTMLheaderRole.replace('%data%', bio.role)).prepend(HTMLheaderName.replace('%data%', bio.name)).append(HTMLbioPic.replace('%data%', bio.biopic)).append(HTMLwelcomeMsg.replace('%data%', bio.welcomeMessage)).append(HTMLskillsStart);
         $.each(bio.contacts, function (key, value) {
             $('#topContacts').append(HTMLcontactGeneric.replace('%contact%', key).replace('%data%', value));
             // .replace('%data%', value));
@@ -34,7 +34,7 @@ var education = {
         "name": "Gyan Bharati School",
         "location": "Delhi",
         "degree": "10+2",
-        "majors": "N/A",
+        "majors": ["N/A"],
         "dates": "2016",
         "url": "http://gyanbharatischool.net"
     },
@@ -102,7 +102,7 @@ var work = {
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc hendrerit justo et sapien dapibus ullamcorper. In risus mi, commodo vitae placerat eu, dapibus at diam. Proin pretium vitae nulla sit amet lacinia. Etiam posuere vitae neque et semper. Duis ultrices fermentum elit vulputate fermentum. Nullam dui tortor, condimentum id varius a, congue feugiat odio. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; "
         }
     ],
-    displayWork: function () {
+    display: function () {
 
         $.each(work.jobs, function (index, value) {
             $("#workExperience").append(HTMLworkStart);
@@ -142,7 +142,7 @@ var projects = {
 };
 bio.display();
 projects.display();
-work.displayWork();
+work.display();
 education.display();
 function inName(name) {
     name = name.trim().split(" ");
